@@ -4,16 +4,22 @@ const main = ["lamb shanks", "lasagna", "ham pizza", "tuna casserole", "deep fri
 const side = ["fried rice", "spaghetti", "white rice", "boiled potatoes", "coleslaw", "country fries", "grilled green beans", "onion rings", "baked sweet potato", "roasted jalapeño peppers", "risotto"];
 const dessrt = ["cheesecake","chocolate bundt cake", "crepes", "churro bites", "frosted cupcakes", "brownies", "chunky chocolate chip cookies", "oreo mousse", "pancakes", "pumpkin pie"];
 
-//generates a random number to access each array
+
 const yourMeal = () => {
-    const randomAppt = Math.floor(Math.random() * (appt.length + 1));
-    const randomMain = Math.floor(Math.random() * (main.length + 1));
-    const randomSide = Math.floor(Math.random() * (side.length + 1));
-    const randomDessert = Math.floor(Math.random() * (dessrt.length + 1));
 
-    
+    //generates a random number to access each array
+
+    const randomAppt = Math.floor(Math.random() * (appt.length));
+    const randomMain = Math.floor(Math.random() * (main.length));
+    const randomSide = Math.floor(Math.random() * (side.length));
+    const randomDessert = Math.floor(Math.random() * (dessrt.length));
 
 
+    // composes final meal suggestions
+
+    message = `Hungry but fresh out of ideas? How about... Start strong with ${appt[randomAppt]} then ${main[randomMain]} with ${side[randomSide]} and end it with ${dessrt[randomDessert]}!`;
+
+    console.log(message);
 
 };
 
