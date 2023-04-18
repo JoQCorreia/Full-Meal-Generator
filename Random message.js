@@ -1,5 +1,5 @@
 // arrays with the parts of the meal to be generated
-const appt = ["charcuterie board", "guacamole and chips", "pork sliders", "cheese biscuits", "scones", "pretzel bites", "rissois", "fried shrimp", "chilli fries"];
+const appt = ["charcuterie board", "guacamole & chips", "pork sliders", "cheese biscuits", "scones", "pretzel bites", "rissois", "fried shrimp", "chilli fries"];
 const main = ["lamb shanks", "lasagna", "ham pizza", "tuna casserole", "deep fried steak", "swedish meatballs", "sauteed salmon", "fried fish", "grilled sardines", "cheeseburger", "baked tilapia"];
 const side = ["fried rice", "spaghetti", "white rice", "boiled potatoes", "coleslaw", "country fries", "grilled green beans", "onion rings", "baked sweet potato", "roasted jalapeño peppers", "risotto"];
 const dessrt = ["cheesecake","chocolate bundt cake", "crepes", "churro bites", "frosted cupcakes", "brownies", "chunky chocolate chip cookies", "oreo mousse", "pancakes", "pumpkin pie"];
@@ -55,9 +55,10 @@ const yourMeal = () => {
 
     // composes final meal suggestions
 
-    message = `Hungry but fresh out of ideas? How about... Start strong with ${appt[randomAppt]} then ${main[randomMain]} with ${side[randomSide]} and end it with ${dessrt[randomDessert]}!`;
+   let message = `With plenty of fresh food but fresh out of ideas? How about... Start strong with ${appt[randomAppt]} then ${main[randomMain]} with ${side[randomSide]} and end it with ${dessrt[randomDessert]}!\n`;
+   let altMessage = `If none of that sounds good, a tasty alternative is ${altAppt()} followed by ${altMain()} with ${altSide()}, topped off with ${altDessert()}`;
 
-
+    console.log(message + altMessage);
 
 };
 
